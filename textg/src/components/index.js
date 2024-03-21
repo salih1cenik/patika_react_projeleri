@@ -21,9 +21,9 @@ function Index() {
 
   return (
     <div>
-      <h2 style={{ color: "white", textAlign: "center" }}>
+      <h1 style={{ color: "white", textAlign: "center" }}>
         React sample text generator app
-      </h2>
+      </h1>
       <hr />
       <div className="ort" style={{ marginLeft: "750px", color: "white" }}>
         <h2>Paragraphs: </h2>
@@ -38,7 +38,7 @@ function Index() {
       </div>
       <div
         className="ort2"
-        style={{ marginLeft: "950px", color: "white", marginTop: "-95px" }}
+        style={{ marginLeft: "950px", color: "white", marginTop: "-89px" }}
       >
         <h2>Include HTML: </h2>
         <input
@@ -49,7 +49,7 @@ function Index() {
         />
       </div>
       <br />
-      <br />
+      <br /><div className='area'>
       <textarea
         style={{
           width: "800px",
@@ -58,12 +58,15 @@ function Index() {
           borderColor: "white",
           backgroundColor: "#303030",
           borderRadius: "10px",
-          marginLeft: "550px",
+
           color: "white",
         }}
+        
         value={typeof data === 'string' ? data : JSON.stringify(data, null, 2)}
         placeholder="Buraya yazın"
+        disabled
       ></textarea>
+      </div>
     </div>
   );
 }
